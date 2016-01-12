@@ -1,7 +1,7 @@
 <?php
 
 $category = (int) $_GET['category'];
-
+echo "<a href='add_product.php?category={$category}'>Добавить продукт</a><br><br>";
 if($category) { 
 	require_once 'db.php';
 
@@ -18,7 +18,7 @@ if($category) {
 		if($res->num_rows) {
 			$products = $res->fetch_all(MYSQLI_ASSOC);
 			
-			echo "<a href='add_product.php?category={$category}'>Добавить продукт</a><br><br>";
+
 			echo <<<TABLE
 			<table border='1'>
 				<thead>
