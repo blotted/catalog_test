@@ -10,18 +10,17 @@
  echo "<h1>Список категорий каталога</h1>";
 
  if(count($catalog)) {
- 	echo "<table style='border-collapse: collapse'>";
+    echo "<table style='border-collapse: collapse'>";
 
- 	foreach ($catalog as $value) {
- 		echo "<tr>
- 		<td style='padding: 5px; border: 1px solid #333;'><a href='catalog_items.php?category={$value['id']}'>{$value['title']}</a></td>
- 		<td style='padding: 5px; border: 1px solid #333;'><a href='catalog_delete.php?category={$value['id']}'>Удалить</a></td>
- 		</tr>";
- 	}
+    foreach ($catalog as $value) {
+        echo "<tr>
+        <td style='padding: 5px; border: 1px solid #333;'><a href='catalog_items.php?category={$value['id']}'>{$value['title']}</a></td>
+        <td style='padding: 5px; border: 1px solid #333;'><a href='catalog_delete.php?category={$value['id']}'>Удалить</a></td>
+        </tr>";
+    }
 
- 	echo "</table><hr />";
-
- 	echo "Всего категорий в магазине - ".count($catalog);	
+    echo "</table><hr />";
+    echo "Всего категорий в магазине - ".count($catalog);	
  } else {
- 	echo "<p>Список пуст</p>";
+    echo "<p>Список пуст</p>";
  }
